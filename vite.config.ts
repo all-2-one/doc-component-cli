@@ -4,5 +4,8 @@ import markdownToVue from './src/markdown-to-vue/src/index';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), markdownToVue()]
+  plugins: [
+    markdownToVue(),
+    vue({ include: [/\.vue$/, /\.md$/, /\.vd$/] })
+  ]
 });
